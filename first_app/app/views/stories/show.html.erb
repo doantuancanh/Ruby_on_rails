@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h2 style = "text-align: center; color: red">
+  
+  <%= @story.name %>
+</h2>
+
+<p style = "text-align: left">
+ 
+  <%= @story.description %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @story.author %>
+</p>
+
+<% @story.chapters.each do |chap| %>
+  <p><%= link_to chap.name, story_chapter_path(@story) %></p>
+<% end %>
+
+<%= link_to 'Add new chap', new_story_chapter_path(@story) %><br>
+<%= link_to 'Edit', edit_story_path(@story) %> |
+<%= link_to 'Back', stories_path %>

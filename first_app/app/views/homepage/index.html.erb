@@ -1,0 +1,11 @@
+<h1>Welcom to your side</h1>
+<% if user_signed_in? %>
+ 
+  <h3><%= link_to('Logout', destroy_user_session_path, method: :delete) %></h3> 
+  
+<% else %>
+  
+  <h3 style = "text-align: center; color:black">Please
+  <%= link_to('Login', new_user_session_path)  %> or <%= link_to('Register', new_user_registration_path)  %> </h3> 
+  
+<% end %>
