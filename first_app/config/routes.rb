@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :stories do
-  	resources :chapters
+  	resources :chapters do
+      collection do
+      
+      end
+    end
   end
   
+
   get 'homepage/index'
 
   root 'homepage#index'

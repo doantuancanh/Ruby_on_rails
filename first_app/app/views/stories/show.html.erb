@@ -16,9 +16,11 @@
 </p>
 
 <% @story.chapters.each do |chap| %>
-  <p><%= link_to chap.name, story_chapter_path(@story) %></p>
+  <p><%= link_to chap.name, story_chapter_path(@story, chap.id) %></p>
 <% end %>
-
-<%= link_to 'Add new chap', new_story_chapter_path(@story) %><br>
+<% if @story.user == current_user %>
+  <%= link_to 'Add new chap', new_story_chapter_path(@story) %>
+<% end %>
+<br>
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>

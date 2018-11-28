@@ -1,3 +1,9 @@
 <h2><%= @chapter.name %></h2>
 <p><%= @chapter.content %></p>
-<%= link_to 'Edit', edit_story_chapter_path(@chapter) %>
+<% if @story.user == current_user %>
+  <%= link_to 'Edit', edit_story_chapter_path(@story, @chapter.id) %> 
+  <%= link_to 'Destroy Chap', story_chapter_path(@story, @chapter.id),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+<% end %>
+<%= link_to 'Back', story_path(@story) %>

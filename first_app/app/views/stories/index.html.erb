@@ -22,13 +22,14 @@
         <% if story.user == current_user  %>
           <td><%= link_to 'Edit', edit_story_path(story) %></td>
           <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-
         <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+<% if user_signed_in?  %>
+  <%= link_to 'New Story', new_story_path %>
+<% end %>
 <br>
 
-<%= link_to 'New Story', new_story_path %>
+
