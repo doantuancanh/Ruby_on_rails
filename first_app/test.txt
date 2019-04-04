@@ -2,7 +2,6 @@ this is a file to test how to git work!
 
 THIS IS A FILE TO TETST HOW TO GIT WORK!
 
-git is great!
 
 Git is great!
 
