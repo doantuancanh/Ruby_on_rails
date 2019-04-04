@@ -1,1 +1,2 @@
 this is a file to test how to git work!
+This is a file to test how to git work!
