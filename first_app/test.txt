@@ -1,8 +1,10 @@
-this is a file to test how to git work!
+i'm bad with git!
 
-THIS IS A FILE TO TETST HOW TO GIT WORK!
+I'm bad with git!
 
+git is great!
 
 Git is great!
 
 GIT IS GREAT!
+
